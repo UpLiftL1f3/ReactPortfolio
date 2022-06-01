@@ -10,19 +10,27 @@ import {
   SidebarMenu,
 } from './sidebarElements';
 
-const SideBar = () => {
+const Sidebar = ({ isOpen, toggle }) => {
   return (
     <>
-      <SidebarContainer>
-        <Icon>
+      <SidebarContainer isOpen={isOpen} onClick={toggle}>
+        <Icon onClick={toggle}>
           <CloseIcon />
         </Icon>
         <SidebarWrapper>
           <SidebarMenu>
-            <SidebarLink to="about">About</SidebarLink>
-            <SidebarLink to="discover">Discover</SidebarLink>
-            <SidebarLink to="services">Services</SidebarLink>
-            <SidebarLink to="signUp">Sign Up</SidebarLink>
+            <SidebarLink to="about" onClick={toggle}>
+              About
+            </SidebarLink>
+            <SidebarLink to="discover" onClick={toggle}>
+              Discover
+            </SidebarLink>
+            <SidebarLink to="services" onClick={toggle}>
+              Services
+            </SidebarLink>
+            <SidebarLink to="signUp" onClick={toggle}>
+              Sign Up
+            </SidebarLink>
           </SidebarMenu>
           <SideBtnWrap>
             <SidebarRoute to="/signIn">Sign In</SidebarRoute>
@@ -33,4 +41,4 @@ const SideBar = () => {
   );
 };
 
-export default SideBar;
+export default Sidebar;

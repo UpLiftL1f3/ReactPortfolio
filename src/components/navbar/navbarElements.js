@@ -7,6 +7,7 @@ export const Nav = styled.nav`
   height: 80px;
   // margin-top: -80px;
   display: flex;
+  justify-content: center;
   align-items: center;
   font-size: 1rem;
   position: sticky;
@@ -25,11 +26,12 @@ export const NavbarContainer = styled.div`
   z-index: 1;
   width: 100%;
   padding: 0 24px;
-  max-width: 1100px;
+  max-width: 89%;
+  // max-width: 1100px;
 `;
 
 export const NavLogo = styled(LinkR)`
-  color: #01bf71;
+  color: #82c0cc;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -61,6 +63,7 @@ export const NavMenu = styled.ul`
   list-style: none;
   text-align: center;
   margin-right: -22px;
+  white-space: nowrap;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -72,7 +75,8 @@ export const NavItem = styled.li`
 `;
 
 export const NavLinks = styled(LinkS)`
-  color: #fff;
+  color: #e9ecef;
+  font-weight: bolder;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -81,7 +85,7 @@ export const NavLinks = styled(LinkS)`
   cursor: pointer;
 
   &.active {
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid #489fb5;
   }
 `;
 
@@ -96,7 +100,7 @@ export const NavBtn = styled.nav`
 
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
-  background: #01bf71;
+  background: #489fb5;
   white-space: nowrap;
   padding: 10px 20px;
   color: #010606;
